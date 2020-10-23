@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <title>NC Map</title>
+     <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+     <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hpZHJhIiwiYSI6ImNrZ2NkNzN1azA4YzMyc3FvMmZidW5rMzcifQ.F4OGJfnSEh-xKbUSHrT2eA';
+          function init(){
+               var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    center: [-79.0558,35.9132],
+                    zoom: 9
+               });
+          }
+
+          window.onload = function(){
+               init();
+          }
+     </script>
+</head>
+<body>
+     <div id="map" style="width:400px;height:400px"></div>
+     <a href="https://tocgis.ci.carrboro.nc.us/Carrboro/Schools/">Chapel Hill / Carrboro City School Districts Map</a>
+     <a href="https://opendata-townofchapelhill.hub.arcgis.com/">Chapel Hill GeoJson Data</a>
+     <a href="https://catalog.data.gov/my/dataset?q=&sort=views_recent+desc&publisher=City+of+Raleigh&res_format=GeoJSON">General Raleigh geojson</a>
+</body>
+</html>
